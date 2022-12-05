@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <p style="margin:50px">this is data</p>
+    <table border = "3">
+    {% for x in product %}
+        <tr>
+            <td>{{ x.name }}</td>
+            <td>{{ x.quantity }}</td>
+            <td>{{ x.price }}</td>
+            <td><a href="delete/{{ x.id }}">delete</a></td>
+            <td><a href="update/{{ x.id }}">update</a></td>   
+        </tr>
+    {% endfor %}
+    </table>
+    <button style="margin:10px;padding:10px"><a href="{% url 'addproduct' %}">Add products</a></button>
+
+{% endblock %}

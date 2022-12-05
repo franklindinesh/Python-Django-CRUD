@@ -1,0 +1,12 @@
+<form action="update_product/{{ product.id }}" method="POST">
+    {% csrf_token %}
+    
+        <h1>Add product Page</h1>
+        Enter  Name<input name="enter name" value="{{ product.name }}">
+        <br><br>
+        Enter Quantity<input name="quantity" value="{{ product.quantity }}">
+        <br><br>
+        Enter Price<input name="price" value="{{ product.price }}">
+        <br><br>
+        <input type="submit" value="submit">
+    </form>
